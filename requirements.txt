@@ -1,0 +1,32 @@
+# Telegram Bot Forwarding System Dependencies
+# Core Telegram libraries
+python-telegram-bot>=20.7
+telethon>=1.29.3
+
+# Database and ORM
+sqlalchemy>=2.0.23
+alembic>=1.13.1
+asyncpg>=0.29.0
+
+# Redis and caching
+redis>=5.0.1
+aioredis>=2.0.1
+
+# Background task processing
+celery>=5.3.4
+
+# Logging and configuration
+structlog>=23.2.0
+python-dotenv>=1.0.0
+
+# Security and validation
+cryptography>=41.0.7
+pydantic>=2.5.2
+pydantic-settings>=2.1.0
+
+# Monitoring and observability
+prometheus-client>=0.19.0
+sentry-sdk>=1.39.2
+
+# Performance optimization
+uvloop>=0.19.0
