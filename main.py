@@ -77,7 +77,7 @@ class BotApplication:
         
         # Initialize forwarding engine
         self.forwarding_engine = ForwardingEngine(self.client_factory)
-        await self.forwarding_engine.initialize()
+        await self.forwarding_engine.start()
         logger.info("Forwarding engine initialized")
         
         # Initialize handler registry
@@ -89,7 +89,7 @@ class BotApplication:
         self.telegram_app = Application.builder().token(settings.bot_token).build()
         
         # Register handlers
-        await self.handler_registry.register_handlers(self.telegram_app)
+        await self.handler_registry.register_handlers()
         logger.info("Bot handlers registered")
         
         logger.info("Bot application initialization complete")

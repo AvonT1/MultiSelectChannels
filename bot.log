@@ -1,0 +1,281 @@
+2025-09-14 13:49:47,631 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:47.631575Z"}
+2025-09-14 13:49:47,631 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:49:50,390 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:49:50,390 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:49:50,390 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:50.390586Z"}
+2025-09-14 13:49:50,390 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:49:50,390 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:49:52,478 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:49:52,478 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:49:53,132 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:49:53,133 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:49:53,134 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:53.134056Z"}
+2025-09-14 13:49:53,136 - __main__ - ERROR - {"error": "MessageProcessor.__init__() missing 1 required positional argument: 'client_factory'", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:49:53.134274Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 79, in initialize\n    self.forwarding_engine = ForwardingEngine(self.client_factory)\n                             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\core\\forwarding_engine.py\", line 30, in __init__\n    self.message_processor = MessageProcessor()\n                             ~~~~~~~~~~~~~~~~^^\nTypeError: MessageProcessor.__init__() missing 1 required positional argument: 'client_factory'"}
+2025-09-14 13:49:53,136 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:53.136630Z"}
+2025-09-14 13:49:53,136 - src.clients.client_factory - INFO - Stopping all clients...
+2025-09-14 13:49:53,136 - src.clients.client_factory - INFO - All clients stopped
+2025-09-14 13:49:53,137 - __main__ - INFO - {"event": "All clients stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:53.137228Z"}
+2025-09-14 13:49:53,137 - __main__ - INFO - {"event": "Bot application shutdown complete", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:49:53.137544Z"}
+2025-09-14 13:50:45,474 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:45.474747Z"}
+2025-09-14 13:50:45,475 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:50:48,155 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:50:48,155 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:50:48,155 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:48.155310Z"}
+2025-09-14 13:50:48,155 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:50:48,155 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:50:50,103 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:50:50,103 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:50:50,105 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:50:50,106 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:50:50,106 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:50.106112Z"}
+2025-09-14 13:50:50,107 - __main__ - ERROR - {"error": "'ForwardingEngine' object has no attribute 'initialize'", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:50:50.106295Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 80, in initialize\n    await self.forwarding_engine.initialize()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'ForwardingEngine' object has no attribute 'initialize'"}
+2025-09-14 13:50:50,107 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:50.107375Z"}
+2025-09-14 13:50:50,107 - __main__ - INFO - {"event": "Forwarding engine stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:50.107518Z"}
+2025-09-14 13:50:50,107 - src.clients.client_factory - INFO - Stopping all clients...
+2025-09-14 13:50:50,107 - src.clients.client_factory - INFO - All clients stopped
+2025-09-14 13:50:50,107 - __main__ - INFO - {"event": "All clients stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:50.107811Z"}
+2025-09-14 13:50:50,107 - __main__ - INFO - {"event": "Bot application shutdown complete", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:50:50.107925Z"}
+2025-09-14 13:51:09,843 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:09.843000Z"}
+2025-09-14 13:51:09,843 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:51:12,322 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:51:12,322 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:51:12,322 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:12.322902Z"}
+2025-09-14 13:51:12,323 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:51:12,323 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:51:14,336 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:51:14,337 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:51:14,339 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:51:14,339 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:51:14,339 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.339618Z"}
+2025-09-14 13:51:14,339 - src.core.forwarding_engine - INFO - Starting forwarding engine...
+2025-09-14 13:51:14,339 - src.core.in_memory_queue - INFO - {"event": "Starting in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:51:14.339906Z"}
+2025-09-14 13:51:14,340 - src.core.forwarding_engine - INFO - Forwarding engine started with 10 workers
+2025-09-14 13:51:14,340 - __main__ - INFO - {"event": "Forwarding engine initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.340177Z"}
+2025-09-14 13:51:14,342 - __main__ - ERROR - {"error": "'Logger' object has no attribute 'bind'", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:51:14.340333Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 84, in initialize\n    self.handler_registry = HandlerRegistry(self.client_factory, self.forwarding_engine)\n                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\handlers\\handler_registry.py\", line 34, in __init__\n    self.logger = logger.bind(component=\"handler_registry\")\n                  ^^^^^^^^^^^\nAttributeError: 'Logger' object has no attribute 'bind'"}
+2025-09-14 13:51:14,342 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.342217Z"}
+2025-09-14 13:51:14,342 - src.core.forwarding_engine - INFO - Stopping forwarding engine...
+2025-09-14 13:51:14,342 - src.core.in_memory_queue - INFO - {"event": "Stopping in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:51:14.342570Z"}
+2025-09-14 13:51:14,342 - src.core.forwarding_engine - INFO - Forwarding engine stopped
+2025-09-14 13:51:14,342 - __main__ - INFO - {"event": "Forwarding engine stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.342841Z"}
+2025-09-14 13:51:14,342 - src.clients.client_factory - INFO - Stopping all clients...
+2025-09-14 13:51:14,343 - src.clients.client_factory - INFO - All clients stopped
+2025-09-14 13:51:14,343 - __main__ - INFO - {"event": "All clients stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.343136Z"}
+2025-09-14 13:51:14,343 - __main__ - INFO - {"event": "Bot application shutdown complete", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:14.343249Z"}
+2025-09-14 13:51:47,846 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:47.846517Z"}
+2025-09-14 13:51:47,846 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:51:50,674 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:51:50,675 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:51:50,675 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:50.675219Z"}
+2025-09-14 13:51:50,675 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:51:50,675 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:51:52,806 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:51:52,806 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:51:52,807 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:51:52,808 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:51:52,808 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.808192Z"}
+2025-09-14 13:51:52,808 - src.core.forwarding_engine - INFO - Starting forwarding engine...
+2025-09-14 13:51:52,808 - src.core.in_memory_queue - INFO - {"event": "Starting in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:51:52.808594Z"}
+2025-09-14 13:51:52,809 - src.core.forwarding_engine - INFO - Forwarding engine started with 10 workers
+2025-09-14 13:51:52,809 - __main__ - INFO - {"event": "Forwarding engine initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.809216Z"}
+2025-09-14 13:51:52,809 - src.handlers.handler_registry - INFO - Initializing handler registry...
+2025-09-14 13:51:52,811 - __main__ - ERROR - {"error": "'LegacyHandlerMigrator' object has no attribute 'initialize'", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:51:52.809495Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 85, in initialize\n    await self.handler_registry.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\handlers\\handler_registry.py\", line 45, in initialize\n    await self.legacy_migrator.initialize()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LegacyHandlerMigrator' object has no attribute 'initialize'"}
+2025-09-14 13:51:52,811 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.811278Z"}
+2025-09-14 13:51:52,811 - src.core.forwarding_engine - INFO - Stopping forwarding engine...
+2025-09-14 13:51:52,811 - src.core.in_memory_queue - INFO - {"event": "Stopping in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:51:52.811638Z"}
+2025-09-14 13:51:52,811 - src.core.forwarding_engine - INFO - Forwarding engine stopped
+2025-09-14 13:51:52,811 - __main__ - INFO - {"event": "Forwarding engine stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.811907Z"}
+2025-09-14 13:51:52,812 - src.clients.client_factory - INFO - Stopping all clients...
+2025-09-14 13:51:52,812 - src.clients.client_factory - INFO - All clients stopped
+2025-09-14 13:51:52,812 - __main__ - INFO - {"event": "All clients stopped", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.812209Z"}
+2025-09-14 13:51:52,812 - __main__ - INFO - {"event": "Bot application shutdown complete", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:51:52.812324Z"}
+2025-09-14 13:52:17,109 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:17.109200Z"}
+2025-09-14 13:52:17,109 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:52:19,851 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:52:19,851 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:52:19,851 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:19.851740Z"}
+2025-09-14 13:52:19,851 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:52:19,852 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:52:21,757 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:52:21,757 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:52:21,759 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:52:21,759 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:52:21,759 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:21.759546Z"}
+2025-09-14 13:52:21,759 - src.core.forwarding_engine - INFO - Starting forwarding engine...
+2025-09-14 13:52:21,759 - src.core.in_memory_queue - INFO - {"event": "Starting in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:52:21.759835Z"}
+2025-09-14 13:52:21,760 - src.core.forwarding_engine - INFO - Forwarding engine started with 10 workers
+2025-09-14 13:52:21,760 - __main__ - INFO - {"event": "Forwarding engine initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:21.760431Z"}
+2025-09-14 13:52:21,760 - src.handlers.handler_registry - INFO - Initializing handler registry...
+2025-09-14 13:52:21,760 - src.handlers.handler_registry - INFO - Handler registry initialized
+2025-09-14 13:52:21,760 - __main__ - INFO - {"event": "Handler registry initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:21.760773Z"}
+2025-09-14 13:52:23,712 - __main__ - ERROR - {"error": "HandlerRegistry.register_handlers() takes 1 positional argument but 2 were given", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:52:23.711999Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 92, in initialize\n    await self.handler_registry.register_handlers(self.telegram_app)\n          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nTypeError: HandlerRegistry.register_handlers() takes 1 positional argument but 2 were given"}
+2025-09-14 13:52:23,713 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:52:23.713073Z"}
+2025-09-14 13:52:23,713 - src.core.forwarding_engine - INFO - Starting queue worker: worker-0
+2025-09-14 13:52:23,713 - src.core.forwarding_engine - ERROR - Error in queue worker worker-0: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,714 - src.core.forwarding_engine - INFO - Starting queue worker: worker-1
+2025-09-14 13:52:23,714 - src.core.forwarding_engine - ERROR - Error in queue worker worker-1: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,714 - src.core.forwarding_engine - INFO - Starting queue worker: worker-2
+2025-09-14 13:52:23,714 - src.core.forwarding_engine - ERROR - Error in queue worker worker-2: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,715 - src.core.forwarding_engine - INFO - Starting queue worker: worker-3
+2025-09-14 13:52:23,715 - src.core.forwarding_engine - ERROR - Error in queue worker worker-3: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,715 - src.core.forwarding_engine - INFO - Starting queue worker: worker-4
+2025-09-14 13:52:23,716 - src.core.forwarding_engine - ERROR - Error in queue worker worker-4: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,717 - src.core.forwarding_engine - INFO - Starting queue worker: worker-5
+2025-09-14 13:52:23,718 - src.core.forwarding_engine - ERROR - Error in queue worker worker-5: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,718 - src.core.forwarding_engine - INFO - Starting queue worker: worker-6
+2025-09-14 13:52:23,718 - src.core.forwarding_engine - ERROR - Error in queue worker worker-6: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,719 - src.core.forwarding_engine - INFO - Starting queue worker: worker-7
+2025-09-14 13:52:23,719 - src.core.forwarding_engine - ERROR - Error in queue worker worker-7: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,720 - src.core.forwarding_engine - INFO - Starting queue worker: worker-8
+2025-09-14 13:52:23,720 - src.core.forwarding_engine - ERROR - Error in queue worker worker-8: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,720 - src.core.forwarding_engine - INFO - Starting queue worker: worker-9
+2025-09-14 13:52:23,721 - src.core.forwarding_engine - ERROR - Error in queue worker worker-9: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+Traceback (most recent call last):
+  File "C:\Users\Kenni\Downloads\01\MultiSelectChannels\src\core\forwarding_engine.py", line 124, in _process_queue_worker
+    queue_item = await self.queue_manager.dequeue_message()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'InMemoryQueueManager' object has no attribute 'dequeue_message'
+2025-09-14 13:52:23,741 - __main__ - ERROR - {"error": "This Updater is not running!", "event": "Application terminated with error", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:52:23.734585Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 92, in initialize\n    await self.handler_registry.register_handlers(self.telegram_app)\n          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\nTypeError: HandlerRegistry.register_handlers() takes 1 positional argument but 2 were given\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 171, in main\n    sys.exit(1)\n    ~~~~~~~~^^^\nSystemExit: 1\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 179, in <module>\n    asyncio.run(main())\n    ~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\base_events.py\", line 725, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 174, in main\n    await app.shutdown()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 131, in shutdown\n    await self.telegram_app.updater.stop()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telegram\\ext\\_updater.py\", line 738, in stop\n    raise RuntimeError(\"This Updater is not running!\")\nRuntimeError: This Updater is not running!"}
+2025-09-14 13:53:56,631 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:53:56.631441Z"}
+2025-09-14 13:53:56,631 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:53:59,345 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:53:59,345 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:53:59,346 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:53:59.345976Z"}
+2025-09-14 13:53:59,346 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:53:59,346 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:54:01,276 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:54:01,276 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:54:01,278 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:54:01,278 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:54:01,278 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:01.278867Z"}
+2025-09-14 13:54:01,279 - src.core.forwarding_engine - INFO - Starting forwarding engine...
+2025-09-14 13:54:01,279 - src.core.in_memory_queue - INFO - {"event": "Starting in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:54:01.279153Z"}
+2025-09-14 13:54:01,279 - src.core.forwarding_engine - INFO - Forwarding engine started with 10 workers
+2025-09-14 13:54:01,279 - __main__ - INFO - {"event": "Forwarding engine initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:01.279423Z"}
+2025-09-14 13:54:01,279 - src.handlers.handler_registry - INFO - Initializing handler registry...
+2025-09-14 13:54:01,279 - src.handlers.handler_registry - INFO - Handler registry initialized
+2025-09-14 13:54:01,279 - __main__ - INFO - {"event": "Handler registry initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:01.279745Z"}
+2025-09-14 13:54:03,116 - src.handlers.handler_registry - INFO - Registering handlers with bot client...
+2025-09-14 13:54:03,120 - __main__ - ERROR - {"error": "'LegacyHandlerMigrator' object has no attribute 'register_handlers'", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:54:03.117429Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 92, in initialize\n    await self.handler_registry.register_handlers()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\handlers\\handler_registry.py\", line 78, in register_handlers\n    await self.legacy_migrator.register_handlers(bot_app)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LegacyHandlerMigrator' object has no attribute 'register_handlers'"}
+2025-09-14 13:54:03,121 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:03.120999Z"}
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-0
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-1
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-2
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-3
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-4
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-5
+2025-09-14 13:54:03,121 - src.core.forwarding_engine - INFO - Starting queue worker: worker-6
+2025-09-14 13:54:03,122 - src.core.forwarding_engine - INFO - Starting queue worker: worker-7
+2025-09-14 13:54:03,122 - src.core.forwarding_engine - INFO - Starting queue worker: worker-8
+2025-09-14 13:54:03,122 - src.core.forwarding_engine - INFO - Starting queue worker: worker-9
+2025-09-14 13:54:03,122 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-0
+2025-09-14 13:54:03,122 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-2
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-5
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-8
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-3
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-6
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-9
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-1
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-4
+2025-09-14 13:54:03,123 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-7
+2025-09-14 13:54:03,129 - __main__ - ERROR - {"error": "This Updater is not running!", "event": "Application terminated with error", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:54:03.125397Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 164, in main\n    await app.initialize()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 92, in initialize\n    await self.handler_registry.register_handlers()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\handlers\\handler_registry.py\", line 78, in register_handlers\n    await self.legacy_migrator.register_handlers(bot_app)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LegacyHandlerMigrator' object has no attribute 'register_handlers'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 171, in main\n    sys.exit(1)\n    ~~~~~~~~^^^\nSystemExit: 1\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 179, in <module>\n    asyncio.run(main())\n    ~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\base_events.py\", line 725, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 174, in main\n    await app.shutdown()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 131, in shutdown\n    await self.telegram_app.updater.stop()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telegram\\ext\\_updater.py\", line 738, in stop\n    raise RuntimeError(\"This Updater is not running!\")\nRuntimeError: This Updater is not running!"}
+2025-09-14 13:54:41,262 - __main__ - INFO - {"event": "Initializing bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:41.262557Z"}
+2025-09-14 13:54:41,262 - src.database.connection - INFO - Initializing database...
+2025-09-14 13:54:43,961 - src.database.connection - INFO - Database tables created successfully
+2025-09-14 13:54:43,961 - src.database.connection - INFO - Database initialization completed
+2025-09-14 13:54:43,961 - __main__ - INFO - {"event": "Database initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:43.961651Z"}
+2025-09-14 13:54:43,961 - src.clients.client_factory - INFO - Initializing client factory...
+2025-09-14 13:54:43,961 - src.clients.bot_client - INFO - Initializing Bot API client...
+2025-09-14 13:54:45,853 - src.clients.bot_client - INFO - Bot API client initialized successfully
+2025-09-14 13:54:45,853 - src.clients.user_client - INFO - Initializing Telethon user client...
+2025-09-14 13:54:45,855 - src.clients.user_client - INFO - Telethon user client initialized successfully
+2025-09-14 13:54:45,855 - src.clients.client_factory - INFO - Client factory initialized successfully
+2025-09-14 13:54:45,856 - __main__ - INFO - {"event": "Client factory initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:45.856041Z"}
+2025-09-14 13:54:45,856 - src.core.forwarding_engine - INFO - Starting forwarding engine...
+2025-09-14 13:54:45,856 - src.core.in_memory_queue - INFO - {"event": "Starting in-memory queue manager", "logger": "src.core.in_memory_queue", "level": "info", "timestamp": "2025-09-14T10:54:45.856334Z"}
+2025-09-14 13:54:45,856 - src.core.forwarding_engine - INFO - Forwarding engine started with 10 workers
+2025-09-14 13:54:45,856 - __main__ - INFO - {"event": "Forwarding engine initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:45.856927Z"}
+2025-09-14 13:54:45,857 - src.handlers.handler_registry - INFO - Initializing handler registry...
+2025-09-14 13:54:45,857 - src.handlers.handler_registry - INFO - Handler registry initialized
+2025-09-14 13:54:45,857 - __main__ - INFO - {"event": "Handler registry initialized", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:45.857270Z"}
+2025-09-14 13:54:47,658 - src.handlers.handler_registry - INFO - Registering handlers with bot client...
+2025-09-14 13:54:47,658 - src.handlers.handler_registry - INFO - All handlers registered successfully
+2025-09-14 13:54:47,659 - __main__ - INFO - {"event": "Bot handlers registered", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:47.659095Z"}
+2025-09-14 13:54:47,659 - __main__ - INFO - {"event": "Bot application initialization complete", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:47.659235Z"}
+2025-09-14 13:54:47,659 - __main__ - INFO - {"event": "Starting bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:47.659359Z"}
+2025-09-14 13:54:47,659 - src.clients.client_factory - INFO - Starting all clients...
+2025-09-14 13:54:47,659 - src.clients.bot_client - INFO - Starting Bot API client...
+2025-09-14 13:54:47,659 - src.core.forwarding_engine - INFO - Starting queue worker: worker-0
+2025-09-14 13:54:47,659 - src.core.forwarding_engine - INFO - Starting queue worker: worker-1
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-2
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-3
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-4
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-5
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-6
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-7
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-8
+2025-09-14 13:54:47,660 - src.core.forwarding_engine - INFO - Starting queue worker: worker-9
+2025-09-14 13:54:52,187 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8216986424:AAFghNPtGFNO398ZU6QWtGILczxdqRWle3Y/getMe "HTTP/1.1 200 OK"
+2025-09-14 13:54:52,188 - telegram.ext.Application - INFO - Application started
+2025-09-14 13:54:52,188 - src.clients.bot_client - INFO - Bot API client started successfully
+2025-09-14 13:54:52,188 - src.clients.user_client - INFO - Starting Telethon user client...
+2025-09-14 13:54:52,188 - telethon.network.mtprotosender - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-09-14 13:54:53,444 - telethon.network.mtprotosender - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-09-14 13:54:53,886 - src.clients.user_client - ERROR - Failed to start user client: EOF when reading a line
+2025-09-14 13:54:53,900 - __main__ - ERROR - {"error": "EOF when reading a line", "event": "Fatal error in main application", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:54:53.886711Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 165, in main\n    await app.start()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 105, in start\n    await self.client_factory.start_all()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\clients\\client_factory.py\", line 56, in start_all\n    await self.user_client.start()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\clients\\user_client.py\", line 94, in start\n    await self.client.start()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telethon\\client\\auth.py\", line 167, in _start\n    value = phone()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telethon\\client\\auth.py\", line 22, in <lambda>\n    phone: typing.Union[typing.Callable[[], str], str] = lambda: input('Please enter your phone (or bot token): '),\n                                                                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEOFError: EOF when reading a line"}
+2025-09-14 13:54:53,901 - __main__ - INFO - {"event": "Shutting down bot application...", "logger": "__main__", "level": "info", "timestamp": "2025-09-14T10:54:53.901131Z"}
+2025-09-14 13:54:53,901 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-1
+2025-09-14 13:54:53,901 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-4
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-7
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-0
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-2
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-5
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-8
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-3
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-6
+2025-09-14 13:54:53,902 - src.core.forwarding_engine - INFO - Queue worker stopped: worker-9
+2025-09-14 13:54:53,908 - __main__ - ERROR - {"error": "This Updater is not running!", "event": "Application terminated with error", "logger": "__main__", "level": "error", "timestamp": "2025-09-14T10:54:53.904242Z", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 165, in main\n    await app.start()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 105, in start\n    await self.client_factory.start_all()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\clients\\client_factory.py\", line 56, in start_all\n    await self.user_client.start()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\src\\clients\\user_client.py\", line 94, in start\n    await self.client.start()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telethon\\client\\auth.py\", line 167, in _start\n    value = phone()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telethon\\client\\auth.py\", line 22, in <lambda>\n    phone: typing.Union[typing.Callable[[], str], str] = lambda: input('Please enter your phone (or bot token): '),\n                                                                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEOFError: EOF when reading a line\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 171, in main\n    sys.exit(1)\n    ~~~~~~~~^^^\nSystemExit: 1\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 179, in <module>\n    asyncio.run(main())\n    ~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 195, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\base_events.py\", line 725, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 174, in main\n    await app.shutdown()\n  File \"C:\\Users\\Kenni\\Downloads\\01\\MultiSelectChannels\\main.py\", line 131, in shutdown\n    await self.telegram_app.updater.stop()\n  File \"C:\\Users\\Kenni\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\telegram\\ext\\_updater.py\", line 738, in stop\n    raise RuntimeError(\"This Updater is not running!\")\nRuntimeError: This Updater is not running!"}
