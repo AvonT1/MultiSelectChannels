@@ -40,6 +40,9 @@ async def main():
     # migrate cleanup
     migration_subparsers.add_parser('cleanup', help='Clean up migration data')
     
+    # migrate init
+    migration_subparsers.add_parser('init', help='Initialize database tables')
+    
     # Admin commands
     admin_parser = subparsers.add_parser('admin', help='Administrative commands')
     admin_subparsers = admin_parser.add_subparsers(dest='admin_action')
@@ -111,7 +114,7 @@ async def main():
         print("\n⏹️  Operation cancelled by user")
         return 1
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"Error: {e}")
         return 1
     
     return 0
@@ -205,6 +208,17 @@ async def handle_migration_commands(args):
             print("✅ Cleanup completed successfully!")
         else:
             print(f"❌ Cleanup failed: {result.get('error', 'Unknown error')}")
+    
+    elif args.migrate_action == 'init':
+        print("Initializing database tables...")
+        from src.database import init_database
+        
+        try:
+            await init_database()
+            print("Database initialization completed successfully!")
+        except Exception as e:
+            print(f"Database initialization failed: {e}")
+            raise
 
 
 async def handle_admin_commands(args):

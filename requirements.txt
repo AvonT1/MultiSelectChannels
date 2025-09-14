@@ -8,21 +8,17 @@ sqlalchemy>=2.0.23
 alembic>=1.13.1
 asyncpg>=0.29.0
 
-# Redis and caching
-redis>=5.0.1
-aioredis>=2.0.1
-
-# Background task processing
-celery>=5.3.4
+# Background task processing (in-memory queues)
+# No additional dependencies needed - using asyncio.Queue
 
 # Logging and configuration
-structlog>=23.2.0
+structlog>=23.1.0
 python-dotenv>=1.0.0
 
 # Security and validation
 cryptography>=41.0.7
-pydantic>=2.5.2
-pydantic-settings>=2.1.0
+pydantic>=1.10.0,<2.0.0
+pydantic[dotenv]>=1.10.0,<2.0.0
 
 # Monitoring and observability
 prometheus-client>=0.19.0
