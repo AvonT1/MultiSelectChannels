@@ -1,221 +1,249 @@
-# Telegram Message Forwarder
+Пересыльщик сообщений для Telegram
+Надёжная система для пересылки сообщений в Telegram.
 
-A robust dual-client Telegram bot for forwarding messages between channels with advanced queue management, reliability features, and comprehensive channel management.
+Продвинутый Telegram-бот с архитектурой на двух клиентах для интеллектуальной пересылки сообщений между каналами. Использует базу данных PostgreSQL, очереди Redis и предоставляет комплексные инструменты для управления.
 
-## Features
+✨ Возможности
+Основной функционал
+Архитектура с двумя клиентами: Использует Bot API (python-telegram-bot) и MTProto (Telethon) для максимальной совместимости.
 
-- **Dual-Client Architecture**: Uses both python-telegram-bot and Telethon for maximum compatibility
-- **Advanced Queue System**: Redis-based message queue with retry logic and FloodWait handling
-- **Channel Management**: Easy subscription to source and destination channels
-- **Message Deduplication**: Prevents duplicate forwarding within configurable TTL
-- **Reliability Features**: Exponential backoff, retry mechanisms, and error handling
-- **Security**: Encrypted session files and admin access controls
-- **Monitoring**: Built-in metrics collection and monitoring
-- **Scalability**: Containerized with Docker and PostgreSQL backend
+Умная пересылка: Два режима — forward_message (сохраняет автора) и copy_message (копирует контент).
 
-## Architecture
+Доступ к приватным каналам: MTProto клиент позволяет получать доступ к закрытым каналам.
 
-### Clients
-- **BotClient**: python-telegram-bot v20.x for handling commands and bot operations
-- **UserClient**: Telethon 1.29.x for MTProto operations and private channel access
-- **ClientManager**: Coordinates between both clients and determines optimal forwarding strategy
+Обработка через очередь: Очередь на базе Redis с обработкой FloodWait (ограничения Telegram) и логикой повторных попыток.
 
-### Core Services
-- **ForwardingService**: Manages message forwarding with worker pools
-- **QueueManager**: Redis-based priority queue for forwarding tasks
-- **DeduplicationService**: Prevents duplicate message forwarding
-- **ChannelService**: Manages channel subscriptions and access
-- **MappingService**: Handles source-to-destination channel mappings
+Дедупликация сообщений: Предотвращает повторную отправку одинаковых сообщений на основе их хэша.
 
-### Database
-- **PostgreSQL**: Primary database with SQLAlchemy ORM
-- **Redis**: Caching, queuing, and deduplication
-- **Alembic**: Database migrations
+Продвинутое управление
+Интерактивный интерфейс: Современные встроенные (inline) клавиатуры с пагинацией (переключением страниц) и множественным выбором.
 
-## Quick Start
+Управление состоянием: Многошаговые сценарии работы с проверкой вводимых данных.
 
-### Prerequisites
-- Python 3.11+
-- PostgreSQL 14+
-- Redis 7.x
-- Docker & Docker Compose (optional)
+Совместимость с предыдущими версиями: Бесшовная миграция с существующего функционала бота.
 
-### Installation
+Панель администратора: Комплексное системное администрирование и мониторинг.
 
-1. Clone the repository:
-```bash
-git clone <git@github.com:AvonT1/mymoreac_messeng_bot.git>
+Инструменты миграции: Автоматизированная миграция с SQLite на PostgreSQL.
+
+Возможности корпоративного уровня
+База данных PostgreSQL: Масштабируемая база данных с асинхронным ORM SQLAlchemy 2.0.
+
+Структурированное логирование: Запись логов в формате JSON с помощью structlog для лучшего наблюдения за системой.
+
+Управление через CLI: Инструменты командной строки для миграции и администрирования.
+
+Конфигурация через окружение: Безопасное управление настройками.
+
+Корректное завершение работы: Правильное управление жизненным циклом с обработкой системных сигналов.
+
+🛠️ Требования к компонентам
+QueueManager: Приоритетная очередь на базе Redis для задач пересылки.
+
+DeduplicationService: Предотвращает дублирование пересылаемых сообщений.
+
+ChannelService: Управляет подписками на каналы и доступом к ним.
+
+MappingService: Отвечает за сопоставление каналов-источников с каналами-получателями.
+
+Базы данных
+PostgreSQL: Основная база данных с использованием SQLAlchemy ORM.
+
+Redis: Для кэширования, очередей и дедупликации.
+
+Alembic: Для миграций (изменений структуры) базы данных.
+
+🚀 Быстрый старт
+Требования
+Python 3.11+
+
+PostgreSQL 14+
+
+Redis 7.x
+
+Docker и Docker Compose (необязательно)
+
+Установка
+Клонируйте репозиторий:
+
+git clone git@github.com:AvonT1/mymoreac_messeng_bot.git
 cd MultiSelectChannels
-```
 
-2. Install dependencies:
-```bash
+Установите зависимости:
+
 pip install -r requirements.txt
-```
 
-3. Set up environment variables:
-```bash
+Настройте переменные окружения:
+
 cp .env.example .env
-# Edit .env with your configuration
-```
+# Отредактируйте файл .env, указав ваши данные
 
-4. Run database migrations:
-```bash
+Выполните миграции базы данных:
+
 alembic upgrade head
-```
 
-5. Start the application:
-```bash
+Запустите приложение:
+
 python main.py
-```
 
-### Docker Setup
+Установка через Docker
+Соберите и запустите сервисы:
 
-1. Build and start services:
-```bash
 docker-compose up -d
-```
 
-2. Run migrations:
-```bash
+Выполните миграции:
+
 docker-compose exec app alembic upgrade head
-```
 
-## Configuration
+⚙️ Конфигурация
+Обязательные переменные окружения
+BOT_TOKEN: Токен вашего бота, полученный от @BotFather.
 
-### Required Environment Variables
+API_ID: Ваш API ID, полученный с my.telegram.org.
 
-- `BOT_TOKEN`: Telegram bot token from @BotFather
-- `API_ID`: Telegram API ID from my.telegram.org
-- `API_HASH`: Telegram API hash from my.telegram.org
-- `DATABASE_URL`: PostgreSQL connection string
-- `REDIS_URL`: Redis connection string
-- `ADMIN_IDS`: Comma-separated list of admin user IDs
+API_HASH: Ваш API hash, полученный с my.telegram.org.
 
-### Optional Variables
+DATABASE_URL: Строка подключения к PostgreSQL.
 
-- `USER_SESSION_FILE_PATH`: Path to Telethon session file (default: sessions/user.session)
-- `MAX_CONCURRENT_FORWARDS`: Maximum concurrent forwarding tasks (default: 10)
-- `ENCRYPTION_KEY`: Key for encrypting session files
-- `DEBUG_MODE`: Enable debug logging (default: false)
-- `LOG_LEVEL`: Logging level (default: INFO)
-- `SENTRY_DSN`: Sentry DSN for error tracking
+REDIS_URL: Строка подключения к Redis.
 
-## Usage
+ADMIN_IDS: ID администраторов бота, перечисленные через запятую.
 
-### Bot Commands
+Необязательные переменные
+USER_SESSION_FILE_PATH: Путь к файлу сессии Telethon (по умолчанию: sessions/user.session).
 
-- `/start` - Start the bot and show main menu
-- `/help` - Show help information
-- `/admin` - Admin panel (admin users only)
+MAX_CONCURRENT_FORWARDS: Максимальное количество одновременных задач пересылки (по умолчанию: 10).
 
-### Channel Management
+ENCRYPTION_KEY: Ключ для шифрования файлов сессий.
 
-1. Use the bot menu to add source and destination channels
-2. Create mappings between source and destination channels
-3. Configure forwarding modes (forward vs copy)
-4. Set up filters and rules
+DEBUG_MODE: Включить режим отладки с подробными логами (по умолчанию: false).
 
-### Forwarding Modes
+LOG_LEVEL: Уровень логирования (по умолчанию: INFO).
 
-- **Forward Mode**: Preserves original author information (requires bot access to both channels)
-- **Copy Mode**: Copies message content without original author (fallback mode)
+SENTRY_DSN: DSN для отслеживания ошибок через Sentry.
 
-## Development
+▶️ Использование
+Команды бота
+/start - Запустить бота и показать главное меню.
 
-### Project Structure
+/help - Показать справочную информацию.
 
-```
+/admin - Панель администратора (только для админов).
+
+Управление каналами
+Используйте меню бота для добавления каналов-источников и каналов-получателей.
+
+Создайте сопоставления (мэппинги) между источниками и получателями.
+
+Настройте режимы пересылки (переслать или скопировать).
+
+Настройте фильтры и правила.
+
+Режимы пересылки
+Режим "Forward" (Переслать): Сохраняет информацию об оригинальном авторе (требует, чтобы бот был в обоих каналах).
+
+Режим "Copy" (Копировать): Копирует только содержимое сообщения без указания автора (используется как запасной вариант).
+
+💻 Разработка
+Структура проекта
 app/
-├── clients/          # Bot and user client implementations
-├── core/             # Core forwarding logic and queue management
-├── database/         # Database models and engine
-├── handlers/         # Message and command handlers
-├── services/         # Business logic services
-└── utils/            # Utilities and helpers
+├── clients/          # Реализации клиентов бота и пользователя
+├── core/             # Основная логика пересылки и управление очередью
+├── database/         # Модели и движок базы данных
+├── handlers/         # Обработчики сообщений и команд
+├── services/         # Сервисы с бизнес-логикой
+└── utils/            # Вспомогательные утилиты и хелперы
 
-migrations/           # Alembic database migrations
-sessions/            # Telegram session files
-logs/                # Application logs
-```
+migrations/           # Миграции базы данных Alembic
+sessions/             # Файлы сессий Telegram
+logs/                 # Логи приложения
 
-### Adding New Features
+Добавление нового функционала
+Создайте ветку для новой функциональности.
 
-1. Create feature branch
-2. Implement changes following existing patterns
-3. Add tests if applicable
-4. Update documentation
-5. Submit pull request
+Внесите изменения, следуя существующим шаблонам.
 
-### Database Migrations
+Добавьте тесты, если это применимо.
 
-Create new migration:
-```bash
-alembic revision --autogenerate -m "Description"
-```
+Обновите документацию.
 
-Apply migrations:
-```bash
+Отправьте pull request.
+
+Миграции базы данных
+Создать новую миграцию:
+
+alembic revision --autogenerate -m "Описание изменений"
+
+Применить миграции:
+
 alembic upgrade head
-```
 
-## Monitoring
+📊 Мониторинг
+Приложение включает встроенный мониторинг со сбором метрик:
 
-The application includes built-in monitoring with metrics collection:
+Скорость пересылки сообщений
 
-- Message forwarding rates
-- Error rates and types
-- Queue sizes and processing times
-- Client connection status
+Частота и типы ошибок
 
-Metrics are stored in Redis and can be exported to monitoring systems like Prometheus.
+Размеры очередей и время обработки
 
-## Security
+Статус подключения клиентов
 
-- Session files are encrypted using Fernet encryption
-- Admin access is validated for sensitive operations
-- Input sanitization prevents injection attacks
-- Rate limiting protects against abuse
+Метрики хранятся в Redis и могут быть экспортированы в системы мониторинга, такие как Prometheus.
 
-## Troubleshooting
+🛡️ Безопасность
+Файлы сессий шифруются с помощью Fernet encryption.
 
-### Common Issues
+Для выполнения важных операций проверяются права администратора.
 
-1. **FloodWait errors**: The bot automatically handles Telegram rate limits with exponential backoff
-2. **Session issues**: Delete session files and re-authenticate if needed
-3. **Database connection**: Ensure PostgreSQL is running and accessible
-4. **Redis connection**: Verify Redis is running and connection string is correct
+Очистка вводимых данных предотвращает инъекции.
 
-### Logs
+Ограничение частоты запросов (rate limiting) защищает от злоупотреблений.
 
-Check application logs in:
-- Console output (when running directly)
-- `logs/` directory (file logging)
-- Docker logs: `docker-compose logs app`
+🔍 Устранение неполадок
+Частые проблемы
+Ошибки FloodWait: Бот автоматически обрабатывает ограничения Telegram с помощью экспоненциальной задержки.
 
-### Debug Mode
+Проблемы с сессией: Удалите файлы сессий и пройдите аутентификацию заново.
 
-Enable debug mode for verbose logging:
-```bash
+Подключение к базе данных: Убедитесь, что PostgreSQL запущен и доступен.
+
+Подключение к Redis: Проверьте, что Redis запущен и строка подключения верна.
+
+Логи
+Проверяйте логи приложения в:
+
+Выводе консоли (при прямом запуске)
+
+Директории logs/ (если настроено логирование в файл)
+
+Логах Docker: docker-compose logs app
+
+Режим отладки
+Включите режим отладки для вывода подробных логов:
+
 export DEBUG_MODE=true
 python main.py
-```
 
-## Contributing
+🤝 Участие в разработке
+Сделайте форк репозитория.
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+Создайте ветку для новой функциональности.
 
-## License
+Внесите свои изменения.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Добавьте тесты, если это применимо.
 
-## Support
+Отправьте pull request.
 
-For support and questions:
-- Create an issue on GitHub
-- Check the troubleshooting section
-- Review the logs for error details
+📜 Лицензия
+Этот проект лицензирован под лицензией MIT - подробности смотрите в файле LICENSE.
+
+💬 Поддержка
+Для поддержки и вопросов:
+
+Создайте issue на GitHub.
+
+Ознакомьтесь с разделом "Устранение неполадок".
+
+Просмотрите логи для получения информации об ошибках.
